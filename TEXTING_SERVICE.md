@@ -25,7 +25,7 @@ The proposed solution is a texting service that will streamline contacting clien
 
 ### Database Schema Changes
 - `dbi4_Contacts`: Add a column `AutoSent, tinyint(1)` to indicate that the text was sent automatically.
-- `db_Clients`: Add two columns — `FollowUp, char(1)` and `FollowUpDate, date`
+- `db_Clients`: Add three columns — `IsInitialText, char(1)`, `ShouldFollowUp, char(1)` and `FollowUpDate, date`
 
 ### Architecture
 - Use the Twilio library to send text messages.
